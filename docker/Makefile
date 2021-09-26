@@ -1,13 +1,13 @@
-VERSION=0.0.65
+VERSION=0.0.69
 PROJECT_ID=jankul02
 PROJECT=${PROJECT_ID}
 
 all: build
 
 build:
-	docker build --pull -t ${PROJECT}/kubernetes-zookeeper:${VERSION} .
+	docker build --pull -t ${PROJECT}/kubernetes-kafka:${VERSION} .
 
 push: build
-	docker push ${PROJECT}/kubernetes-zookeeper:${VERSION}
+	docker push ${PROJECT}/kubernetes-kafka:${VERSION}
 
 .PHONY: all build push
